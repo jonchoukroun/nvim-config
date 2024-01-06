@@ -1,0 +1,38 @@
+return {
+    "nvim-treesitter/nvim-treesitter",
+    build = ":TSUpdate",
+    dependencies = {
+        "nvim-treesitter/nvim-treesitter-textobjects",
+        "windwp/nvim-ts-autotag",
+        "JoosepAlviste/nvim-ts-context-commentstring"
+    },
+    event = { "BufReadPre", "BufNewFile" },
+    config = function()
+        local configs = require("nvim-treesitter.configs")
+
+        configs.setup({
+            ensure_installed = {
+                "c",
+                "css",
+                "elixir",
+                "gitignore",
+                "html",
+                "javascript",
+                "json",
+                "lua",
+                "markdown",
+                "typescript",
+                "tsx",
+                "rust",
+                "vim",
+                "yaml",
+            },
+            sync_install = false,
+            highlight = { enable = true },
+            indent = { enable = true },  
+            autotag = { enable = true },
+        })
+
+        require("ts_context_commentstring").setup({})
+    end
+}
