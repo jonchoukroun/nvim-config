@@ -31,7 +31,7 @@ return {
 		vim.keymap.set("n", "<leader>fw", function()
 			lga_shortcuts.grep_word_under_cursor({ postfix = "" })
 		end, { desc = "Find word (grep)" })
-		vim.keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "Live grep" })
+		vim.keymap.set("n", "<leader>fs", builtin.live_grep, { desc = "Live grep" })
 		vim.keymap.set("n", "<leader>fv", builtin.commands, { desc = "Find commands" })
 		vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Find help tags" })
 		vim.keymap.set("n", "<leader>fm", builtin.man_pages, { desc = "Find man pages" })

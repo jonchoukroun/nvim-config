@@ -26,6 +26,7 @@ return {
 				"tsx",
 				"rust",
 				"vim",
+				"vimdoc",
 				"yaml",
 			},
 			sync_install = false,
