@@ -26,6 +26,7 @@ return {
 				"cssls",
 				"lua_ls",
 				"emmet_ls",
+				"rust_analyzer",
 			},
 		})
 
@@ -34,6 +35,7 @@ return {
 				"eslint_d",
 				"prettierd",
 				"stylua",
+				"codelldb",
 			},
 		})
 	end,

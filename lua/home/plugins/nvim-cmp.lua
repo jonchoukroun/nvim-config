@@ -3,6 +3,10 @@ return {
 	event = "InsertEnter",
 	dependencies = {
 		"hrsh7th/cmp-buffer",
+		"hrsh7th/cmp-nvim-lsp",
+		"hrsh7th/cmp-nvim-lsp-signature-help",
+		"hrsh7th/cmp-vsnip",
+		"hrsh7th/vim-vsnip",
 		"hrsh7th/cmp-path",
 		"L3MON4D3/LuaSnip",
 		"saadparwaiz1/cmp_luasnip",
@@ -38,8 +42,11 @@ return {
 			}),
 			sources = cmp.config.sources({
 				{ name = "luasnip" },
-				{ name = "nvim_lsp" },
-				{ name = "buffer" },
+				{ name = "nvim_lsp", keyword_length = 3 },
+				{ name = "nvim_lsp_signaure_help" },
+				{ name = "nvim_lua", keyword_length = 2 },
+				{ name = "buffer", keyword_length = 2 },
+				{ name = "vsnip", keyword_length = 2 },
 				{ name = "path" },
 			}),
 			formatting = {
