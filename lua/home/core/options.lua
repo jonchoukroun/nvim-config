@@ -24,5 +24,5 @@ opt.splitbelow = true
 -- Show ruler at col 80
 opt.colorcolumn = "80"
 
--- Persist marks after session close
+-- True colors
 opt.termguicolors = true
