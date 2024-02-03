@@ -24,3 +24,10 @@ opt.splitbelow = true
 -- Show ruler
 opt.colorcolumn = "80"
 opt.cursorline = true
+
+-- Show buffer full path
+opt.winbar = "%=%m %f"
+
+-- Smoother scrolling
+opt.mouse = "a"
+opt.scrolloff = 5
