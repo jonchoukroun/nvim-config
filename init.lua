@@ -1,2 +1,2 @@
-require("home.core")
-require("home.lazy")
+require("config.core")
+require("config.lazy")
