@@ -23,5 +23,5 @@ local opts = {
 }
 
 require("lazy").setup({
-	{ import = "home.plugins" },
+	{ import = "config.plugins" },
 }, opts)
