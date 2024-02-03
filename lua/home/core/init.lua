@@ -1,2 +1,2 @@
-require("home.core.options")
-require("home.core.keymaps")
+require("config.core.options")
+require("config.core.keymaps")
