@@ -53,6 +53,9 @@ return {
 
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
+            require("lspconfig").html.setup({
+                capabilities = capabilities
+            })
 			require("lspconfig").lua_ls.setup({
 				capabilities = capabilities,
 				settings = {
@@ -65,14 +68,6 @@ return {
 			})
 			require("lspconfig").tsserver.setup({
 				capabilities = capabilities,
-			})
-			require("lspconfig").clangd.setup({
-				capabilities = capabilities,
-			})
-			require("lspconfig").sourcekit.setup({
-				capabilities = capabilities,
-				cmd = { "/usr/bin/sourcekit-lsp" },
-				root_dir = vim.fs.dirname(vim.fs.find({ "*.swift" }, { upward = true })[0]),
 			})
 		end,
 	},

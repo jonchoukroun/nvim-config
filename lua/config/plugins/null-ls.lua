@@ -16,8 +16,9 @@ return {
 				}),
 				-- Completion is handled by nvim-cmp
 				-- Formatting
-				null_ls.builtins.formatting.stylua,
+                null_ls.builtins.formatting.htmlbeautifier,
 				null_ls.builtins.formatting.prettierd,
+				null_ls.builtins.formatting.stylua,
 				-- Code Actions
 				null_ls.builtins.code_actions.eslint_d,
 			},

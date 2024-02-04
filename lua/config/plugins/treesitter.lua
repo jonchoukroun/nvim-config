@@ -15,14 +15,14 @@ return {
 
         configs.setup({
             ensure_installed = {
+                "css",
+                "html",
                 "javascript",
                 "json",
                 "lua",
                 "markdown",
                 "markdown_inline",
-                "objc",
                 "rust",
-                "swift",
                 "typescript",
             },
             sync_install = false,
