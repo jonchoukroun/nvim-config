@@ -1,9 +1,6 @@
 vim.g.mapleader = " "
 vim.g.localmapleader = " "
 
--- We're using Oil.nvim instead of NetRw for now
--- vim.keymap.set("n", "<leader>rw", vim.cmd.Ex, { desc = "Return to NetRw" })
-
 -- Clear search highlighting
 vim.keymap.set("n", "<esc>", "<cmd>noh<CR>", { noremap = true, silent = true })
 
