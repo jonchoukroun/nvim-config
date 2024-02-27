@@ -9,7 +9,7 @@ return {
         "williamboman/mason-lspconfig.nvim",
         config = function()
             require("mason-lspconfig").setup({
-                ensure_installed = { "cssls", "html", "lua_ls", "tsserver" }
+                ensure_installed = { "cssls", "html", "lua_ls", "rust_analyzer", "slint_lsp", "tsserver" }
             })
         end,
     },
@@ -66,6 +66,12 @@ return {
                         },
                     },
                 },
+            })
+            require("lspconfig").rust_analyzer.setup({
+                capabilities = capabilities,
+            })
+            require("lspconfig").slint_lsp.setup({
+                capabilities = capabilities,
             })
             require("lspconfig").tsserver.setup({
                 capabilities = capabilities,

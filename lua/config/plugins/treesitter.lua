@@ -23,6 +23,7 @@ return {
                 "markdown",
                 "markdown_inline",
                 "rust",
+                "slint",
                 "typescript",
             },
             sync_install = false,
