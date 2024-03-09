@@ -1,12 +1,9 @@
 return {
-	-- "morhetz/gruvbox",
-	"catppuccin/nvim",
-	name = "catppuccin",
+	"jonchoukroun/borland-colors",
 	lazy = false,
 	priority = 1000,
 	config = function()
 		vim.opt.termguicolors = true
-		-- vim.cmd([[colorscheme gruvbox]])
-		vim.cmd([[colorscheme catppuccin]])
+		vim.cmd([[colorscheme borland]])
 	end,
 }
