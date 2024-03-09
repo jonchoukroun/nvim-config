@@ -11,8 +11,7 @@ return {
     end,
     opts = {
         icons_enabled = true,
-        -- theme = "gruvbox",
-        theme = "catppuccin",
+        theme = "borland"
     },
     config = function()
         require("lualine").setup()
