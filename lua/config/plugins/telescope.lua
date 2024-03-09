@@ -28,7 +28,6 @@ return {
 
 		vim.keymap.set("n", "<leader>lt", builtin.treesitter, { desc = "List treesitter symbols" })
 
-		-- vim.keymap.set("n", "<leader>sg", builtin.live_grep, { desc = "Live grep" })
 		vim.keymap.set("n", "<leader>sg", function()
 			builtin.grep_string({ search = vim.fn.input("Grep >") })
 		end, { desc = "Search (grep)" })
