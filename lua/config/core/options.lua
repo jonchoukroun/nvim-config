@@ -31,3 +31,6 @@ opt.winbar = "%=%m %f"
 -- Smoother scrolling
 opt.mouse = "a"
 opt.scrolloff = 5
+
+-- Yank to clipboard
+vim.api.nvim_set_option("clipboard", "unnamed")
