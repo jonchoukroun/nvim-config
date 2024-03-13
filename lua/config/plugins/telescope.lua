@@ -33,6 +33,11 @@ return {
 		end, { desc = "Search (grep)" })
 		vim.keymap.set("n", "<leader>sr", builtin.resume, { desc = "Resume search" })
 		vim.keymap.set("n", "<leader>sw", builtin.grep_string, { desc = "Search word" })
-		vim.keymap.set("v", "<leader>sw", builtin.grep_string, { desc = "Search word" })
+		vim.keymap.set(
+			"v",
+			"<leader>sw",
+			"y<cmd>exec 'Telescope grep_string search=' . escape(@0, ' ')<cr>",
+			{ desc = "Search selection" }
+		)
 	end,
 }
