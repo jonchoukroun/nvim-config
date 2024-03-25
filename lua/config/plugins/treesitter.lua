@@ -5,7 +5,14 @@ return {
 		"nvim-treesitter/nvim-treesitter-textobjects",
 		"JoosepAlviste/nvim-ts-context-commentstring",
 		"nvim-treesitter/nvim-treesitter-context",
-		"windwp/nvim-ts-autotag",
+		{
+			"windwp/nvim-ts-autotag",
+			config = function()
+				require("nvim-treesitter.configs").setup({
+					autotag = { enable = true },
+				})
+			end,
+		}
 	},
 	event = { "BufReadPre", "BufNewFile" },
 	config = function()
@@ -30,7 +37,6 @@ return {
 			sync_install = false,
 			highlight = { enable = true },
 			indent = { enable = true },
-			autotag = { enable = true },
 		})
 
 		require("ts_context_commentstring").setup({})
