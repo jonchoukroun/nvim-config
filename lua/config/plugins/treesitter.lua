@@ -20,7 +20,8 @@ return {
 
 		configs.setup({
 			ensure_installed = {
-				"c",
+				"bash",
+                "c",
 				"cpp",
 				"css",
 				"html",
@@ -30,6 +31,7 @@ return {
 				"markdown",
 				"markdown_inline",
 				"objc",
+                "regex",
 				"rust",
 				"tsx",
 				"typescript",
