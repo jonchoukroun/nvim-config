@@ -9,15 +9,15 @@ return {
 		})
 		vim.keymap.set(
 			"n",
-			"-",
+			"<leader>ft",
 			"<cmd>lua MiniFiles.open(vim.api.nvim_buf_get_name(0), true)<CR>",
-			{ desc = "Open file explorer (cwd)" }
+			{ desc = "Traverse file tree (cwd)" }
 		)
 		vim.keymap.set(
 			"n",
-			"<leader>fe",
+			"<leader>fT",
 			"<cmd>lua MiniFiles.open(vim.loop.cwd(), true)<CR>",
-			{ desc = "Open file explorer (root)" }
+			{ desc = "Traverse file tree (root)" }
 		)
 	end,
 }
