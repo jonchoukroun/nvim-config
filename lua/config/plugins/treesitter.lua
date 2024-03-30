@@ -12,7 +12,7 @@ return {
 					autotag = { enable = true },
 				})
 			end,
-		}
+		},
 	},
 	event = { "BufReadPre", "BufNewFile" },
 	config = function()
@@ -21,7 +21,7 @@ return {
 		configs.setup({
 			ensure_installed = {
 				"bash",
-                "c",
+				"c",
 				"cpp",
 				"css",
 				"html",
@@ -31,14 +31,18 @@ return {
 				"markdown",
 				"markdown_inline",
 				"objc",
-                "regex",
+				"regex",
 				"rust",
 				"tsx",
 				"typescript",
+				"vim",
+				"vimdoc",
 			},
 			sync_install = false,
+			auto_install = true,
 			highlight = { enable = true },
 			indent = { enable = true },
+			additional_vim_regex_highlighting = false,
 		})
 
 		require("ts_context_commentstring").setup({})
