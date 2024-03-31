@@ -85,12 +85,15 @@ return {
 				},
 				window = {
 					completion = {
-						winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,Search:None",
 						col_offset = -3,
 						side_padding = 1,
+						border = "shadow",
+						setmetatable,
 					},
-					completion = cmp.config.window.bordered(),
-					documentation = cmp.config.window.bordered(),
+					documentation = {
+						side_padding = 1,
+						border = "shadow",
+					},
 				},
 				formatting = {
 					fields = { "abbr", "kind", "menu" },
