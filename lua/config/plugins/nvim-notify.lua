@@ -3,7 +3,6 @@ return {
 	config = function()
 		local on_open = function(win)
 			local conf = vim.api.nvim_win_get_config(win)
-			conf.height = 2
 			conf.border = "shadow"
 			vim.api.nvim_win_set_config(win, conf)
 		end
