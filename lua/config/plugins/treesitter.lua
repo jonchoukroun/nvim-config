@@ -4,7 +4,7 @@ return {
 	dependencies = {
 		"nvim-treesitter/nvim-treesitter-textobjects",
 		"JoosepAlviste/nvim-ts-context-commentstring",
-		"nvim-treesitter/nvim-treesitter-context",
+		{ "nvim-treesitter/nvim-treesitter-context" },
 		{
 			"windwp/nvim-ts-autotag",
 			config = function()
@@ -49,7 +49,6 @@ return {
 
 		require("treesitter-context").setup({
 			multiline_threshold = 4,
-			separator = "_",
 		})
 	end,
 }

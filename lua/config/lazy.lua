@@ -20,6 +20,10 @@ local opts = {
 	change_detection = {
 		notify = false,
 	},
+	ui = {
+		border = "shadow",
+		backdrop = 100,
+	},
 }
 
 require("lazy").setup({
