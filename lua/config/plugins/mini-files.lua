@@ -6,6 +6,9 @@ return {
 			mappings = {
 				go_in_plus = "<CR>",
 			},
+			windows = {
+				preview = true,
+			},
 		})
 		vim.keymap.set(
 			"n",
