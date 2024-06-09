@@ -20,7 +20,15 @@ return {
 			["g."] = "actions.toggle_hidden",
 		}
 		require("oil").setup({
+			default_file_explorer = true,
 			keymaps = keymap_override,
+			view_options = {
+				show_hidden = true,
+				natural_order = true,
+				is_always_hidden = function(name, _)
+					return name == ".."
+				end,
+			},
 		})
 
 		vim.keymap.set("n", "-", "<cmd>Oil<CR>", { desc = "Open directory" })
