@@ -15,6 +15,7 @@ return {
 					"lua_ls",
 					"rust_analyzer",
 					"tsserver",
+					"asm_lsp",
 				},
 			})
 		end,
@@ -88,6 +89,9 @@ return {
 				},
 			})
 			require("lspconfig").tsserver.setup({
+				capabilities = capabilities,
+			})
+			require("lspconfig").asm_lsp.setup({
 				capabilities = capabilities,
 			})
 		end,
