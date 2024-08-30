@@ -69,27 +69,30 @@ return {
 
 			vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Code action" })
 
+			local lspconfig = require("lspconfig")
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-			require("lspconfig").clangd.setup({
-				capabilities = capabilities,
-			})
-			require("lspconfig").emmet_ls.setup({
-				capabilities = capabilities,
-			})
-			require("lspconfig").lua_ls.setup({
-				capabilities = capabilities,
-				settings = {
-					Lua = {
-						diagnostics = {
-							globals = { "vim" },
+			local servers = {
+				clangd = {},
+				sourcekit = {
+					root_dir = lspconfig.util.root_pattern(".git", "Package.swift", "compile_commands.json"),
+				},
+				emmet_ls = {},
+				lua_ls = {
+					settings = {
+						Lua = {
+							diagnostics = {
+								globals = { "vim" },
+							},
 						},
 					},
 				},
-			})
-			require("lspconfig").tsserver.setup({
-				capabilities = capabilities,
-			})
+				tsserver = {},
+			}
+			for server, setup in pairs(servers) do
+				setup.capabilities = capabilities
+				lspconfig[server].setup(setup)
+			end
 		end,
 	},
 }
