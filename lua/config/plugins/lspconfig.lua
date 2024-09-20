@@ -14,7 +14,7 @@ return {
 					"emmet_ls",
 					"lua_ls",
 					"rust_analyzer",
-					"tsserver",
+					"ts_ls",
 				},
 			})
 		end,
@@ -87,7 +87,7 @@ return {
 						},
 					},
 				},
-				tsserver = {},
+				ts_ls = {},
 			}
 			for server, setup in pairs(servers) do
 				setup.capabilities = capabilities
