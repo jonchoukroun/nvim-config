@@ -1,16 +1,23 @@
 return {
 	"folke/which-key.nvim",
 	event = "VeryLazy",
-	init = function()
-		vim.o.timeout = true
-		vim.o.timeoutlen = 300
-	end,
-	config = function()
-		require("which-key").setup({
-			window = {
-				border = "shadow",
-				margin = { 0, 5, 2, 5 },
+	opts = {
+		filter = function(mapping)
+			return mapping.desc and mapping.desc ~= ""
+		end,
+		replace = {
+			key = {
+				{ "<tab>", "TAB" },
 			},
-		})
-	end,
+		},
+	},
+	keys = {
+		{
+			"<leader>?",
+			function()
+				require("which-key").show({ global = false })
+			end,
+			desc = "Buffer local keymaps",
+		},
+	},
 }
