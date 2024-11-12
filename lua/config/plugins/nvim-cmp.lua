@@ -87,12 +87,14 @@ return {
 					completion = {
 						col_offset = -3,
 						side_padding = 1,
-						border = "shadow",
+						border = "rounded",
+						focusable = true,
 						setmetatable,
 					},
 					documentation = {
 						side_padding = 1,
-						border = "shadow",
+						border = "rounded",
+						focusable = true,
 					},
 				},
 				formatting = {
