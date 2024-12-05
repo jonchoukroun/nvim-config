@@ -99,6 +99,7 @@ return {
 				},
 				formatting = {
 					fields = { "abbr", "kind", "menu" },
+                    expandable_indicator = true,
 					format = function(entry, vim_item)
 						vim_item.kind = string.format("%s %s", cmp_kinds[vim_item.kind], vim_item.kind)
 						vim_item.menu = ({
@@ -131,6 +132,7 @@ return {
 				}),
 				sources = cmp.config.sources({
 					{ name = "nvim_lsp" },
+                    { name = "lazydev", group_index = 0 },
 					{ name = "luasnip" },
 					{ name = "path" },
 				}, {
