@@ -10,6 +10,11 @@ return {
 			config = function()
 				require("nvim-treesitter.configs").setup({
 					autotag = { enable = true },
+					modules = {},
+					ensure_installed = {},
+					ignore_install = {},
+					sync_install = false,
+					auto_install = true,
 				})
 			end,
 		},
@@ -39,6 +44,8 @@ return {
 			highlight = { enable = true },
 			indent = { enable = true },
 			additional_vim_regex_highlighting = false,
+			modules = {},
+			ignore_install = {},
 		})
 
 		require("ts_context_commentstring").setup({})
