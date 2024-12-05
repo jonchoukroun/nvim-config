@@ -11,12 +11,12 @@ return {
 	config = function()
 		local telescope = require("telescope")
 
-		telescope.setup()
+		telescope.setup(_)
 		telescope.load_extension("fzf")
 
 		local builtin = require("telescope.builtin")
 
-		vim.keymap.set("n", "<leader>b", builtin.buffers, { desc = "Find buffers" })
+		vim.keymap.set("n", "<leader>bf", builtin.buffers, { desc = "Find buffers" })
 
 		vim.keymap.set("n", "<leader>fc", builtin.git_bcommits, { desc = "Show git commits" })
 		vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Find files (cwd)" })
