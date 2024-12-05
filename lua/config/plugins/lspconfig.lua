@@ -79,13 +79,7 @@ return {
 				},
 				emmet_ls = {},
 				lua_ls = {
-					settings = {
-						Lua = {
-							diagnostics = {
-								globals = { "vim" },
-							},
-						},
-					},
+					settings = { Lua = {} },
 				},
 				ts_ls = {},
 			}
