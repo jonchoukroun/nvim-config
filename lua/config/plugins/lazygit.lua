@@ -1,13 +1,12 @@
 return {
 	"kdheepak/lazygit.nvim",
 	dependencies = {
-		"nvim-telescope/telescope.nvim",
 		"nvim-lua/plenary.nvim",
 	},
 	keys = {
 		{ "<leader>gg", "<cmd>LazyGit<CR>", desc = "Lazy Git" },
 	},
 	config = function()
-		require("telescope").load_extension("lazygit")
+		vim.api.nvim_set_hl(0, "LazyGitFloat", { link = "AccentText", default = true })
 	end,
 }

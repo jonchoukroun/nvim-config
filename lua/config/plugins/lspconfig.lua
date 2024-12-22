@@ -34,6 +34,7 @@ return {
 	},
 	{
 		"neovim/nvim-lspconfig",
+		dependencies = { "saghen/blink.cmp" },
 		event = { "BufReadPre", "BufNewFile" },
 		config = function()
 			-- Diagnostics
@@ -56,9 +57,6 @@ return {
 					opts.desc = "Go to implementation"
 					vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
 
-					opts.desc = "Go to references"
-					vim.keymap.set("n", "gr", require("telescope.builtin").lsp_references, opts)
-
 					opts.desc = ""
 					vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
 
@@ -70,7 +68,7 @@ return {
 			vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Code action" })
 
 			local lspconfig = require("lspconfig")
-			local capabilities = require("cmp_nvim_lsp").default_capabilities()
+			local capabilities = require("blink.cmp").get_lsp_capabilities()
 
 			local servers = {
 				clangd = {},
