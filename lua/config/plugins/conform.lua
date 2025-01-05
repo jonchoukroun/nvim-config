@@ -4,13 +4,15 @@ return {
 	cmd = { "ConformInfo" },
 	opts = {
 		formatters_by_ft = {
-			lua = { "stylua" },
-			javascript = { "prettierd" },
-			typescript = { "prettierd" },
-			javascriptreact = { "prettierd" },
-			typescriptreact = { "prettierd" },
 			c = { "clang_format" },
 			cpp = { "clang_format" },
+			css = { "prettierd" },
+			html = { "prettierd" },
+			javascript = { "prettierd" },
+			javascriptreact = { "prettierd" },
+			lua = { "stylua" },
+			typescript = { "prettierd" },
+			typescriptreact = { "prettierd" },
 		},
 		format_on_save = {
 			timeout_ms = 1000,
