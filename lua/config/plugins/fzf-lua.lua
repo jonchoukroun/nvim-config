@@ -1,14 +1,15 @@
 return {
 	"ibhagwan/fzf-lua",
-	dependencies = {
-		{ "junegunn/fzf", build = "./install --bin" },
-		"nvim-tree/nvim-web-devicons",
-	},
 	config = function()
 		local fzfLua = require("fzf-lua")
 		fzfLua.setup({
 			"default-title",
 			fzf_opts = { ["--cycle"] = true },
+			files = {
+				git_icons = false,
+				file_icons = false,
+				color_icons = false,
+			},
 		})
 
 		vim.keymap.set("n", "<leader>bf", fzfLua.buffers, { desc = "Find buffers" })
