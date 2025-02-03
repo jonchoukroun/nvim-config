@@ -10,10 +10,8 @@ return {
 		config = function()
 			require("mason-lspconfig").setup({
 				ensure_installed = {
-					"clangd",
 					"emmet_ls",
 					"lua_ls",
-					"rust_analyzer",
 					"ts_ls",
 				},
 			})

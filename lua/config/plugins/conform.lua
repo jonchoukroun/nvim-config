@@ -4,10 +4,10 @@ return {
 	cmd = { "ConformInfo" },
 	opts = {
 		formatters_by_ft = {
-			c = { "clang_format" },
-			cpp = { "clang_format" },
+			-- c = { "clang_format" },
+			-- cpp = { "clang_format" },
 			css = { "prettierd" },
-			html = { "prettierd" },
+			-- html = { "prettierd" },
 			javascript = { "prettierd" },
 			javascriptreact = { "prettierd" },
 			lua = { "stylua" },
@@ -16,7 +16,7 @@ return {
 		},
 		format_on_save = {
 			timeout_ms = 1000,
-			lsp_fallback = true,
+			lsp_fallback = false,
 		},
 	},
 }
