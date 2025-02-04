@@ -49,6 +49,9 @@ return {
 	keys = {
 		{ "<leader>db", "<cmd>DapToggleBreakpoint<CR>", desc = "DAP: Toggle Breakpoint" },
 		{ "<leader>dr", "<cmd>DapContinue<CR>", desc = "DAP: Run" },
-		{ "<leader>ds", "<cmd>DapTerminate<CR>", desc = "DAP: Terminate" },
+		{ "<leader>dt", "<cmd>DapTerminate<CR>", desc = "DAP: Terminate" },
+		{ "<leader>ds", "<cmd>DapStepOver<CR>", desc = "DAP: Step Over" },
+		{ "<leader>di", "<cmd>DapStepInto<CR>", desc = "DAP: Step Into" },
+		{ "<leader>do", "<cmd>DapStepOut<CR>", desc = "DAP: Step Out" },
 	},
 }
