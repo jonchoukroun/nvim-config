@@ -20,6 +20,7 @@ local opts = {
 	change_detection = {
 		notify = false,
 	},
+	rocks = { enabled = false },
 }
 
 require("lazy").setup({
