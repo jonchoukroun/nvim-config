@@ -3,7 +3,7 @@ return {
 	config = function()
 		local fzfLua = require("fzf-lua")
 		fzfLua.setup({
-			"default-title",
+			"telescope",
 			fzf_opts = { ["--cycle"] = true },
 			files = {
 				git_icons = false,
