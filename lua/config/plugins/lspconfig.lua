@@ -68,21 +68,21 @@ return {
 			local lspconfig = require("lspconfig")
 			local capabilities = require("blink.cmp").get_lsp_capabilities()
 
-			local servers = {
-				clangd = {},
-				sourcekit = {
-					root_dir = lspconfig.util.root_pattern(".git", "Package.swift", "compile_commands.json"),
+			lspconfig.clangd.setup({})
+			lspconfig.emmet_ls.setup({})
+			lspconfig.lua_ls.setup({
+				setings = { Lua = {} },
+			})
+			local sktCapabilities = capabilities
+			sktCapabilities.workspace = {
+				didChangeWatchedFiles = {
+					dynamicRegistration = true,
 				},
-				emmet_ls = {},
-				lua_ls = {
-					settings = { Lua = {} },
-				},
-				ts_ls = {},
 			}
-			for server, setup in pairs(servers) do
-				setup.capabilities = capabilities
-				lspconfig[server].setup(setup)
-			end
+			lspconfig.sourcekit.setup({
+				capabilities = sktCapabilities,
+			})
+			lspconfig.ts_ls.setup({})
 		end,
 	},
 }
