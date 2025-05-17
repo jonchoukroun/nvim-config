@@ -4,6 +4,7 @@ return {
 		local fzfLua = require("fzf-lua")
 		fzfLua.setup({
 			"telescope",
+			winopts = { preview = { wrap = true } },
 			fzf_opts = { ["--cycle"] = true },
 			files = {
 				git_icons = false,
