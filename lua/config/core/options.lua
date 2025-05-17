@@ -33,7 +33,7 @@ opt.mouse = "a"
 opt.scrolloff = 5
 
 -- Yank to clipboard
-vim.api.nvim_set_option("clipboard", "unnamed")
+vim.api.nvim_set_option_value("clipboard", "unnamed", {})
 
 -- Identify .m files as Objective-C instead of Matlab
 vim.g.filetype_m = "objc"
