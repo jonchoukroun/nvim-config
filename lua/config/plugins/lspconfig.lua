@@ -35,10 +35,6 @@ return {
 		dependencies = { "saghen/blink.cmp" },
 		event = { "BufReadPre", "BufNewFile" },
 		config = function()
-			-- Diagnostics
-			vim.keymap.set("n", "<space>e", vim.diagnostic.open_float)
-			vim.keymap.set("n", "<space>q", vim.diagnostic.setloclist)
-
 			vim.api.nvim_create_autocmd("LspAttach", {
 				group = vim.api.nvim_create_augroup("UserLspConfig", {}),
 				callback = function(ev)
@@ -52,9 +48,6 @@ return {
 
 					opts.desc = "Go to implementation"
 					vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
-
-					opts.desc = ""
-					vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
 
 					opts.desc = "Rename"
 					vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
