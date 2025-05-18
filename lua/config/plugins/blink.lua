@@ -1,4 +1,3 @@
----@diagnostic disable: missing-fields
 return {
 	"saghen/blink.cmp",
 	lazy = false,
@@ -11,8 +10,6 @@ return {
 		},
 	},
 	version = "v0.*",
-	---@module "blink.cmp"
-	---@type blink.cmp.Config
 	opts = {
 		completion = {
 			accept = {
