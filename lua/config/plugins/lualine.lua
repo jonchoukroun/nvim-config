@@ -6,7 +6,6 @@ return {
 			options = {
 				section_separators = { left = " ", right = " " },
 				component_separators = { left = " ", right = " " },
-				theme = "base16",
 			},
 			sections = {
 				lualine_b = {
@@ -15,6 +14,13 @@ return {
 					{
 						"diagnostics",
 						sources = { "nvim_diagnostic", "nvim_lsp" },
+					},
+				},
+				lualine_x = {
+					{
+						require("noice").api.statusline.mode.get,
+						cond = require("noice").api.statusline.mode.has,
+						color = { fg = "#000000" },
 					},
 				},
 			},
