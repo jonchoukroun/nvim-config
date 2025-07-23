@@ -22,8 +22,10 @@ return {
 		vim.keymap.set("n", "<leader>ft", fzfLua.tags, { desc = "Find project tags" })
 		vim.keymap.set("n", "<leader>fv", fzfLua.commands, { desc = "Find commands" })
 
-		vim.keymap.set("n", "<leader>sg", fzfLua.live_grep_glob, { desc = "Search (live grep w/ glob)" })
-		vim.keymap.set("n", "<leader>sr", fzfLua.live_grep_resume, { desc = "Resume search" })
+		vim.keymap.set("n", "<leader>sg", fzfLua.live_grep, { desc = "Search (live grep w/ glob)" })
+		vim.keymap.set("n", "<leader>sr", function()
+			fzfLua.live_grep({ resume = true })
+		end, { desc = "Resume search" })
 		vim.keymap.set("n", "<leader>sw", fzfLua.grep_cword, { desc = "Search word" })
 		vim.keymap.set("n", "<leader>sW", fzfLua.grep_cWORD, { desc = "Search word (exact)" })
 		vim.keymap.set("v", "<leader>sw", fzfLua.grep_visual, { desc = "Search selection" })
