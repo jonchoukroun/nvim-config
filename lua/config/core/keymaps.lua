@@ -22,3 +22,7 @@ vim.keymap.set("n", "[b", "<cmd>bprev<CR>", { desc = "Previous buffer" })
 -- Buffer management
 vim.keymap.set("n", "<leader>bd", "<cmd>%bd<CR>", { desc = "Close all buffers" })
 vim.keymap.set("n", "<leader>bo", "<cmd>%bd|e#|bd#<CR>", { desc = "Close all other buffers" })
+
+-- Buffer settings
+vim.keymap.set("n", "<leader>w", "<cmd>set wrap<CR>", { desc = "Wrap text on" })
+vim.keymap.set("n", "<leader>W", "<cmd>set nowrap<CR>", { desc = "Wrap text off" })
