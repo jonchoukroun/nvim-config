@@ -4,9 +4,6 @@ return {
 		event = "VeryLazy",
 		config = function()
 			require("noice").setup({
-				cmdline = {
-					view = "cmdline",
-				},
 				lsp = {
 					override = {
 						["vim.lsp.util.convert_input_to_markdown_lines"] = true,
@@ -23,6 +20,10 @@ return {
 						},
 						opts = { skip = true },
 					},
+				},
+				presets = {
+					command_palette = true,
+					long_message_to_split = true,
 				},
 			})
 		end,
