@@ -1,7 +1,7 @@
 return {
-	dir = "/Users/jonchoukroun/Developer/NvimPlugins/SimpleColor",
-	name = "retrocode",
+	"jonchoukroun/nvim-phosphor",
+	name = "phosphor",
 	config = function()
-		vim.cmd("colorscheme retrocode")
+		vim.cmd("colorscheme phosphor")
 	end,
 }
