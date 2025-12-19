@@ -7,7 +7,7 @@ return {
 			-- c = { "clang_format" },
 			-- cpp = { "clang_format" },
 			css = { "prettierd" },
-			-- html = { "prettierd" },
+			html = { "prettierd" },
 			javascript = { "prettierd" },
 			javascriptreact = { "prettierd" },
 			lua = { "stylua" },
