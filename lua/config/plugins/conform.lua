@@ -14,9 +14,9 @@ return {
 			typescript = { "prettierd" },
 			typescriptreact = { "prettierd" },
 		},
-		format_on_save = {
-			timeout_ms = 1000,
-			lsp_fallback = false,
-		},
+		-- format_on_save = {
+		-- 	timeout_ms = 1000,
+		-- 	lsp_fallback = false,
+		-- },
 	},
 }
