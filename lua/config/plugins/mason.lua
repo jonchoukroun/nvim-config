@@ -20,6 +20,7 @@ return {
 					"prettierd",
 					"stylelint",
 					"stylua",
+					"ts_ls",
 				},
 			})
 		end,
