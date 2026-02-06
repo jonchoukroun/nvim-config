@@ -1,4 +1,23 @@
 return {
+	-- catppuccin: colorful pastel
+	{
+		-- {
+		-- 	"catppuccin/nvim",
+		-- 	name = "catppuccin",
+		-- 	priority = 1000,
+		-- 	config = function()
+		-- 		vim.cmd("colorscheme catppuccin")
+		-- 	end,
+		-- },
+	},
+    -- rose pine: minimal pinkish
+    {
+        "rose-pine/neovim",
+        name = "rose-pine",
+        config = function ()
+            vim.cmd("colorscheme rose-pine")
+        end
+    },
 	-- Updated legacy vim colorscheme
 	{
 		-- dir = "/Users/jonchoukroun/Developer/NvimPlugins/AphexColor/",
