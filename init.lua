@@ -1,3 +1,4 @@
-require("config.core")
-require("config.lazy")
-require("config.lsp")
+require("core")
+require("lazy_nvim")
+require("statusline")
+require("lsp")
