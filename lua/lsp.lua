@@ -1,5 +1,7 @@
 vim.lsp.enable({
-    "lua_ls",
-    "ts_ls"
+	"emmet",
+	"lua_ls",
+	"stylua",
+	"ts_ls",
 })
-vim.diagnostic.config({ virtual_lines = { current_line = true} })
+vim.diagnostic.config({ virtual_lines = { current_line = true } })
