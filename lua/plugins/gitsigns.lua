@@ -8,11 +8,12 @@ return {
                 vim.keymap.set(mode, l, r, { buffer = buffer, desc = desc })
             end
 
-            map("n", "]h", gs.next_hunk, "Next Hunk")
-            map("n", "[h", gs.prev_hunk, "Prev Hunk")
-            map("n", "<leader>ghR", gs.reset_buffer, "Reset Buffer")
-            map("n", "<leader>ghb", function() gs.blame_line({ full = true }) end, "Blame Line")
-            map("n", "<leader>ghd", gs.diffthis, "Diff This")
+            map("n", "]h", gs.next_hunk, "Next hunk")
+            map("n", "[h", gs.prev_hunk, "Prev hunk")
+            map("n", "<leader>ghr", gs.reset_hunk, "Reset hunk")
+            map("n", "<leader>ghR", gs.reset_buffer, "Reset buffer")
+            map("n", "<leader>ghb", function() gs.blame_line({ full = true }) end, "Blame line")
+            map("n", "<leader>ghd", gs.diffthis, "Diff this")
         end,
     }
 }
