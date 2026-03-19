@@ -1,4 +1,5 @@
 vim.lsp.enable({
+	"clangd",
 	"emmet",
 	"lua_ls",
 	"stylua",
