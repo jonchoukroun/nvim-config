@@ -8,8 +8,10 @@ return {
 	branch = "main",
 	build = ":TSUpdate",
 	config = function()
-        local parsers = {
+		local parsers = {
 			"bash",
+			"c",
+			"cpp",
 			"comment",
 			"css",
 			"gitignore",
@@ -27,10 +29,6 @@ return {
 			"vim",
 			"vimdoc",
 		}
-        local ts_filetypes = vim.iter(parsers):map(function (lang)
-            return vim.treesitter.language.get_filetypes(lang)
-        end):flatten():totable()
-
 		local ts = require("nvim-treesitter")
 		ts.install(parsers)
 
@@ -38,11 +36,13 @@ return {
 
 		vim.api.nvim_create_autocmd("FileType", {
 			desc = "Setup treesitter highlighting and indentation for a buffer",
-            pattern = ts_filetypes,
+			pattern = { "<filetype>" },
 			group = group,
-			callback = function(event)
-                vim.treesitter.start(event.buf)
-                vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+			callback = function()
+				vim.treesitter.start()
+				vim.wo[0][0].foldexpr = "v:lua.vim.treesitter.foldexpr()"
+				vim.wo[0][0].foldmethod = "expr"
+				vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
 			end,
 		})
 
