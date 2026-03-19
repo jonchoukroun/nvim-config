@@ -20,7 +20,7 @@ setKeymap("n", "<C-u>", "<C-u>zz", { noremap = true })
 
 -- Buffer management
 setKeymap("n", "<leader>bd", "<cmd>%bd<CR>", { desc = "Close all buffers" })
-setKeymap("n", "<leader>bo", "<cmd>%bd|e#|bd#<CR>", { desc = "Close all other buffers" })
+setKeymap("n", "<leader>bo", "<cmd>%bd!|e#|bd#<CR>", { desc = "Close all other buffers" })
 
 -- Buffer settings
 setKeymap("n", "<leader>w", "<cmd>set wrap<CR>", { desc = "Wrap text on" })
