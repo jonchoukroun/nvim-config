@@ -1,8 +1,8 @@
 vim.lsp.enable({
 	"clangd",
-	"emmet",
-	"lua_ls",
+	"emmet-language-server",
+	"lua-language-server",
 	"stylua",
-	"ts_ls",
+	"typescript-language-server",
 })
 vim.diagnostic.config({ virtual_lines = { current_line = true } })
