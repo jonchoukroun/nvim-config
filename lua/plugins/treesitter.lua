@@ -36,12 +36,13 @@ return {
 
 		vim.api.nvim_create_autocmd("FileType", {
 			desc = "Setup treesitter highlighting and indentation for a buffer",
-			pattern = { "<filetype>" },
+			pattern = parsers,
 			group = group,
 			callback = function()
 				vim.treesitter.start()
 				vim.wo[0][0].foldexpr = "v:lua.vim.treesitter.foldexpr()"
 				vim.wo[0][0].foldmethod = "expr"
+                vim.wo[0][0].foldenable = false
 				vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
 			end,
 		})
