@@ -5,17 +5,19 @@ return {
 	opts = {
 		formatters_by_ft = {
 			c = { "clang-format" },
-			cpp = { "clang-format" },
-			lua = { "stylua" },
 			css = { "prettierd" },
-			javascript = { "prettierd" },
-			typescript = { "prettierd" },
+			cpp = { "clang-format" },
+			html = { "prettierd" },
 			javascriptreact = { "prettierd" },
+			json = { "prettierd" },
+			lua = { "stylua" },
+			markdown = { "prettierd" },
+			typescript = { "prettierd" },
 			typescriptreact = { "prettierd" },
 		},
-		format_on_save = {
-			timeout_ms = 500,
-			lsp_format = false,
-		},
+		-- format_on_save = {
+		-- 	timeout_ms = 500,
+		-- 	lsp_format = false,
+		-- },
 	},
 }
