@@ -10,7 +10,7 @@ return {
 			html = { "prettierd" },
 			javascriptreact = { "prettierd" },
 			json = { "prettierd" },
-			lua = { "stylua" },
+			-- lua = { "stylua" },
 			markdown = { "prettierd" },
 			typescript = { "prettierd" },
 			typescriptreact = { "prettierd" },
