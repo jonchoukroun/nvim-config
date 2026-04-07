@@ -1,3 +1,4 @@
+-- LSP installed on machine, not using Mason
 vim.lsp.enable({
 	"clangd",
 	"emmet-language-server",
