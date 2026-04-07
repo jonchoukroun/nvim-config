@@ -5,19 +5,24 @@ return {
 	opts = {
 		formatters_by_ft = {
 			c = { "clang-format" },
-			css = { "prettierd" },
+			css = { "prettier" },
 			cpp = { "clang-format" },
-			html = { "prettierd" },
-			javascriptreact = { "prettierd" },
-			json = { "prettierd" },
+			html = { "prettier" },
+			javascriptreact = { "prettier" },
+			json = { "prettier" },
 			lua = { "stylua" },
-			markdown = { "prettierd" },
-			typescript = { "prettierd" },
-			typescriptreact = { "prettierd" },
+			markdown = { "prettier" },
+			typescript = { "prettier" },
+			typescriptreact = { "prettier" },
 		},
-		-- format_on_save = {
-		-- 	timeout_ms = 500,
-		-- 	lsp_format = false,
-		-- },
+		formatters = {
+			prettier = {
+				command = "./node_modules/.bin/prettier",
+			},
+		},
+		format_on_save = {
+			timeout_ms = 500,
+			lsp_format = false,
+		},
 	},
 }
