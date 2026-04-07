@@ -59,6 +59,18 @@ function cmp.git()
     })
 end
 
+function cmp.filetype()
+    return hi_pattern:format("Ft: ", "%{&filetype}")
+end
+
+function cmp.lint_progress()
+  local linters = require("lint").get_running()
+  if #linters == 0 then
+      return "No lint"
+  end
+  return "Lint: " .. table.concat(linters, ", ")
+end
+
 function cmp.position()
   return hi_pattern:format("Search"," %3l:%-2c ")
 end
@@ -70,7 +82,8 @@ local statusline = {
   "%r",
   "%m",
   "%=",
-  "%{&filetype} ",
+  "%{%v:lua._statusline_component('filetype')%} ",
+  "%{%v:lua._statusline_component('lint_progress')%} ",
   " %2p%% ",
   "%{%v:lua._statusline_component('position')%}"
 }
