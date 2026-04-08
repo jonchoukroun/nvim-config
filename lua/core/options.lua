@@ -26,6 +26,8 @@ opt.colorcolumn = "80"
 opt.signcolumn = "yes:1"
 opt.cursorline = true
 
+vim.cmd("syntax off")
+
 -- Show buffer full path
 opt.winbar = "%=%m %f"
 
