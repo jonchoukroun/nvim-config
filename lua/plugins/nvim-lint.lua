@@ -3,7 +3,6 @@ return {
 	"mfussenegger/nvim-lint",
 	config = function()
 		local lint = require("lint")
-        y = 10
 		vim.env.ESLINT_D_PPID = vim.fn.getpid()
 		lint.linters_by_ft = {
 			css = { "stylelint" },
