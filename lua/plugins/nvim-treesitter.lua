@@ -1,0 +1,46 @@
+return {
+	-- "nvim-treesitter/nvim-treesitter",
+	-- lazy = false,
+	-- branch = "main",
+	-- build = ":TSUpdate",
+	-- config = function()
+	-- 	local parsers = {
+	-- 		-- "bash",
+	-- 		-- "c",
+	-- 		-- "cpp",
+	-- 		-- "comment",
+	-- 		-- "css",
+	-- 		-- "gitignore",
+	-- 		-- "html",
+	-- 		-- "javascript",
+	-- 		-- "json",
+	-- 		-- "lua",
+	-- 		-- "luadoc",
+	-- 		-- "markdown",
+	-- 		-- "markdown_inline",
+	-- 		-- "regex",
+	-- 		-- "scss",
+	-- 		-- "tsx",
+	-- 		"typescript",
+	-- 		-- "vim",
+	-- 		-- "vimdoc",
+	-- 	}
+	-- 	local ts = require("nvim-treesitter")
+	-- 	ts.install(parsers)
+	--
+	-- 	-- local group = vim.api.nvim_create_augroup("TreesitterSetup", { clear = true })
+	--
+	-- 	-- vim.api.nvim_create_autocmd("FileType", {
+	-- 	-- 	desc = "Setup treesitter highlighting and indentation for a buffer",
+	-- 	-- 	pattern = parsers,
+	-- 	-- 	group = group,
+	-- 	-- 	callback = function()
+	-- 	-- 		vim.treesitter.start()
+	-- 	-- 		vim.wo[0][0].foldexpr = "v:lua.vim.treesitter.foldexpr()"
+	-- 	-- 		vim.wo[0][0].foldmethod = "expr"
+	-- 	-- 		vim.wo[0][0].foldenable = false
+	-- 	-- 		vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+	-- 	-- 	end,
+	-- 	-- })
+	-- end,
+}
