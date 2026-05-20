@@ -8,6 +8,7 @@ return {
 			css = { "prettier" },
 			cpp = { "clang-format" },
 			html = { "prettier" },
+			javascript = { "prettier" },
 			javascriptreact = { "prettier" },
 			json = { "prettier" },
 			lua = { "stylua" },
