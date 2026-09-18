@@ -13,11 +13,6 @@ return {
 			typescriptreact = { "stylelint", "eslint" },
 		}
 
-		lint.linters.luacheck.args = {
-			"--globals",
-			"vim",
-		}
-
 		-- Will not lint on file open
 		vim.api.nvim_create_autocmd({ "InsertLeave", "BufReadPost", "BufWritePost" }, {
 			callback = function()
