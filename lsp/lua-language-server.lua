@@ -21,7 +21,7 @@ return {
             runtime = {
                 version = "LuaJIT"
             },
-            telemtry = {
+            telemetry = {
                 enable = false,
             },
             workspace = {
