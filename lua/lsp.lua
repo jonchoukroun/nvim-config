@@ -2,6 +2,7 @@
 vim.lsp.enable({
     "clangd",
     "emmet-language-server",
+    "java-language-server",
     "lua-language-server",
     "typescript-language-server",
 })
