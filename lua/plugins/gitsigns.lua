@@ -12,8 +12,10 @@ return {
             map("n", "[h", gs.prev_hunk, "Prev hunk")
             map("n", "<leader>ghr", gs.reset_hunk, "Reset hunk")
             map("n", "<leader>ghR", gs.reset_buffer, "Reset buffer")
-            map("n", "<leader>ghb", function() gs.blame_line({ full = true }) end, "Blame line")
+            map("n", "<leader>ghb", function()
+                gs.blame_line({ full = true })
+            end, "Blame line")
             map("n", "<leader>ghd", gs.diffthis, "Diff this")
         end,
-    }
+    },
 }

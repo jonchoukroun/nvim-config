@@ -10,10 +10,10 @@ return {
                     columns = {
                         { "label" },
                         { "kind" },
-                        { "source_name" }
-                    }
-                }
-            }
+                        { "source_name" },
+                    },
+                },
+            },
         },
-    }
+    },
 }

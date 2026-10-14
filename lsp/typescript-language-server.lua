@@ -8,12 +8,12 @@ return {
         "javascript",
         "javascriptreact",
         "typescript",
-        "typescriptreact"
+        "typescriptreact",
     },
     root_markers = {
         ".git",
         ".tsconfig",
         "tsconfig.json",
-        "tsconfig.base.json"
-    }
+        "tsconfig.base.json",
+    },
 }
