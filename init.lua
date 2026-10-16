@@ -1,4 +1,6 @@
 require("core")
+require("pack")
+require("config")
 require("lazy_nvim")
 require("statusline")
 require("lsp")
