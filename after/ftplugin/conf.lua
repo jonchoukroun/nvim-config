@@ -1,2 +1,2 @@
 vim.treesitter.language.register("bash", "conf")
-vim.treesitter.start()
+require("config.treesitter").start("bash")

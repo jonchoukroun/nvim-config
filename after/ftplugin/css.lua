@@ -1,1 +1,1 @@
-vim.treesitter.start()
+require("config.treesitter").start("css")

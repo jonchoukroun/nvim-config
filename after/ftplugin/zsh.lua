@@ -1,2 +1,2 @@
 vim.treesitter.language.register("bash", "zsh")
-vim.treesitter.start()
+require("config.treesitter").start("bash")
