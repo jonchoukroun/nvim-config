@@ -1,0 +1,26 @@
+require("conform").setup({
+    formatters_by_ft = {
+        c = { "clang-format" },
+        css = { "prettier" },
+        cpp = { "clang-format" },
+        html = { "prettier" },
+        -- No java formatter installed
+        java = false,
+        javascript = { "prettier" },
+        javascriptreact = { "prettier" },
+        json = { "prettier" },
+        lua = { "stylua" },
+        markdown = { "prettier" },
+        typescript = { "prettier" },
+        typescriptreact = { "prettier" },
+    },
+    formatters = {
+        prettier = {
+            command = "./node_modules/.bin/prettier",
+        },
+    },
+    format_on_save = {
+        timeout_ms = 500,
+        lsp_format = false,
+    },
+})
