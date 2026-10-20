@@ -31,6 +31,9 @@ vim.cmd("syntax off")
 -- Show buffer full path
 opt.winbar = "%=%m %f"
 
+-- Add border to all windows
+vim.o.winborder = "bold"
+
 -- Smoother scrolling
 opt.mouse = "a"
 opt.scrolloff = 5
