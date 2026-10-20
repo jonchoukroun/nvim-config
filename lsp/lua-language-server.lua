@@ -1,8 +1,9 @@
+-- Install managed by homebrew
 ---@type vim.lsp.Config
 return {
     cmd = { "lua-language-server" },
     filetypes = { "lua" },
-    root_markers = { '.git' },
+    root_markers = { ".git" },
     settings = {
         Lua = {
             codeLens = {
@@ -18,9 +19,9 @@ return {
                 enable = true,
             },
             runtime = {
-                version = "LuaJIT"
+                version = "LuaJIT",
             },
-            telemtry = {
+            telemetry = {
                 enable = false,
             },
             workspace = {

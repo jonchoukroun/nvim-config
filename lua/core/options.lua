@@ -26,8 +26,13 @@ opt.colorcolumn = "80"
 opt.signcolumn = "yes:1"
 opt.cursorline = true
 
+vim.cmd("syntax off")
+
 -- Show buffer full path
 opt.winbar = "%=%m %f"
+
+-- Add border to all windows
+vim.o.winborder = "bold"
 
 -- Smoother scrolling
 opt.mouse = "a"
@@ -39,4 +44,5 @@ vim.api.nvim_set_option_value("clipboard", "unnamed", {})
 -- Identify .m files as Objective-C instead of Matlab
 vim.g.filetype_m = "objc"
 
--- vim.cmd("colorscheme vim")
+-- Persist undo across sessions
+vim.opt.undofile = true

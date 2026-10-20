@@ -32,4 +32,3 @@ setKeymap("n", "<leader>fb", ":lua vim.lsp.buf.format()<CR>", { desc = "Format b
 
 -- Clear search highlighting
 setKeymap("n", "<esc>", "<cmd>noh<CR>", { noremap = true, silent = true })
-
