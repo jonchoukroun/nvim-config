@@ -4,8 +4,6 @@ require("conform").setup({
         css = { "prettier" },
         cpp = { "clang-format" },
         html = { "prettier" },
-        -- No java formatter installed
-        java = false,
         javascript = { "prettier" },
         javascriptreact = { "prettier" },
         json = { "prettier" },
